@@ -1,2 +1,2 @@
 # Projeto-Jogo
-Projeto de um jogo pedre, papel ou tesoura. 
+Projeto de um jogo pedra, papel ou tesoura. 
