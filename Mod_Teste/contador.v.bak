@@ -1,0 +1,9 @@
+module contador (input E, Prs,
+						output [3:0]Q);
+	
+	ffjk q0(E, 1'b1, 1'b1, 1'b1, Prs, Q[0]);
+	ffjk q1(E, 1'b1, 1'b1, 1'b1, Prs, Q[1]);
+	ffjk q2(E, 1'b1, 1'b1, 1'b1, Prs, Q[2]);
+	ffjk q3(E, 1'b1, 1'b1, 1'b1, Prs, Q[2]);
+
+endmodule	

@@ -1,0 +1,90 @@
+//Código sem Comentários para copiar e colar no Compilador ------
+
+LW $1, FF($0)
+SLTi $2, $1, 80
+BNE $0, $2, FD
+ADDi $3, $0, 89
+ADDi $4, $0, 92
+ADDi $5, $0, A4
+ADDi $6, $0, A1
+ADDi $7, $0, 8A
+ADDi $8, $0, 94
+ADDi $9, $0, 91
+ADDi $A, $0, A2
+ADDi $B, $0, 8C
+BNE $1, $3, 2  
+ADDi $F, $F, 1
+J 26
+BNE $1, $4, 2   
+ADDi $F, $F, 1
+J 26
+BNE $1, $5, 2   
+ADDi $F, $F, 1
+J 26
+BNE $1, $6, 2   
+ADDi $D, $D, 1
+J 26
+BNE $1, $7, 2   
+ADDi $D, $D, 1
+J 26
+BNE $1, $8, 2   
+ADDi $D, $D, 1
+J 26
+BNE $1, $9, 2   
+ADDi $E, $E, 1
+J 26
+BNE $1, $A, 2  
+ADDi $E, $E, 1
+J 26
+BNE $1, $B, 2   
+ADDi $E, $E, 1
+LW $1, FF($0)
+SLTi $C, $1, 80
+BEQ $0, $C, FD
+J 0
+
+//Código comentado ------------------------------------------
+
+LW $1, FF($0)		//Lê a entrada paralela e joga para o registrador $1    
+SLTi $2, $1, 80		//Se $1 < 80'h $2 = 1, $2 = 0 c.c
+BNE $0, $2, FD = -2	//Se $2 != 0, pula para a linha 0, caso o contrário ele continua o código
+ADDi $3, $0, 89		//$3 = 89'h'
+ADDi $4, $0, 92		//$4 = 92'h		
+ADDi $5, $0, A4 
+ADDi $6, $0, A1
+ADDi $7, $0, 8A
+ADDi $8, $0, 94
+ADDi $9, $0, 91
+ADDi $A, $0, A2
+ADDi $B, $0, 8C
+
+BNE $1, $3, 2  		
+ADDi $F, $F, 1
+J 26
+BNE $1, $4, 2   
+ADDi $F, $F, 1
+J 26
+BNE $1, $5, 2   
+ADDi $F, $F, 1
+J 26
+BNE $1, $6, 2   
+ADDi $D, $D, 1
+J 26
+BNE $1, $7, 2   
+ADDi $D, $D, 1
+J 26
+BNE $1, $8, 2   
+ADDi $D, $D, 1
+J 26
+BNE $1, $9, 2   
+ADDi $E, $E, 1
+J 26
+BNE $1, $A, 2  
+ADDi $E, $E, 1
+J 26
+BNE $1, $B, 2   
+ADDi $E, $E, 1
+LW $1, FF($0)
+SLTi $C, $1, 80
+BEQ $0, $C, FD
+J 0
